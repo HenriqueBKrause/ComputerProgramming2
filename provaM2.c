@@ -4,13 +4,15 @@
 #define MAXDELEGACIAS 5
 #define MAXVITIMAS 10
 
+
+//definindo as estruturas:
 typedef struct {
   int x;
   int y;
 } coord;
 
 typedef struct {
-  coord local;
+  coord local;         //delcarado a estrutura a cima como condição da vairiavel, ou seja ela inicia a s coord de x,y dentro da variavel local;
   float raio;
   int capac;
 } delegacia;
@@ -19,15 +21,20 @@ typedef struct {
   coord local;
 } vitima;
 
+
+//colocando as informações das structs, como a maxima de cada lista:
 delegacia listadelegacias[MAXDELEGACIAS];
 vitima listavitimas[MAXVITIMAS];
 
+
+//Delcarando as funções:
 void questao01(int *qdel, int *qvit);
 vitima questao02(int del, int vit);
 void questao03(vitima x);
 void questao04(int qdel, int qvit);
 float dist(int x1, int y1, int x2, int y2);
 
+//função main
 int main() {
   int qtde_del, qtde_vit;
   questao01(&qtde_del, &qtde_vit);
@@ -36,6 +43,11 @@ int main() {
   return 0;
 }
 
+
+//escopo das funções:
+
+
+//Questão 1:
 void questao01(int *qdel, int *qvit) {
   int i;
   printf("Digite a quantidade de delegacias:");
@@ -60,6 +72,8 @@ void questao01(int *qdel, int *qvit) {
     scanf("%d", &listavitimas[i].local.y);
   }
 }
+
+//questão 2:
 
 vitima questao02(int del, int vit) {
   int i, j, mais_proxima;
@@ -90,6 +104,7 @@ vitima questao02(int del, int vit) {
   return listavitimas[mais_proxima];
 }
 
+//Questão 3
 void questao03(vitima x) { 
   printf("%d %d\n", x.local.x, x.local.y); 
 }
@@ -98,6 +113,8 @@ float dist(int x1, int y1, int x2, int y2) {
   return sqrt(pow(x2 - x1, 2) + pow(y2 - y1, 2));
 }
 
+
+//quetsão 4 
 void questao04(int qdel, int qvit) {
   int i, j, conta[MAXDELEGACIAS] = {0}, mais_proxima;
   float d, menor_d;
