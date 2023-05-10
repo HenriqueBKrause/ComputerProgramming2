@@ -1,0 +1,7 @@
+Usuário: (200,200) - Qualidade do sinal: 0.056322
+Usuário: (4,3) - Qualidade do sinal: 0.359935
+Usuário: (6,5) - Qualidade do sinal: 0.292848
+Usuário: (6,7) - Qualidade do sinal: 0.265981
+Usuário: (4,5) - Qualidade do sinal: 0.306927
+Usuário: (2,3) - Qualidade do sinal: 0.366025
+Usuário: (1,2) - Qualidade do sinal: 0.414214
